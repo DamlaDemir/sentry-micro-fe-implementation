@@ -1,0 +1,33 @@
+{
+  "name": "footer-e2e",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "footer-e2e/src",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "footer-e2e/cypress.config.ts",
+        "testingType": "e2e",
+        "devServerTarget": "footer:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "footer:serve:production"
+        },
+        "ci": {
+          "devServerTarget": "footer:serve-static"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["footer-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "implicitDependencies": ["footer"],
+  "tags": []
+}

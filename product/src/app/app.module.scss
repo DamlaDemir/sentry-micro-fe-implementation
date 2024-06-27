@@ -1,0 +1,53 @@
+/* Your styles goes here. */
+
+.productWrapper {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 24px;
+  margin: 24px;
+}
+
+.cardWrapper {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 2px 0 4px rgba(0 0 0 / 50%);
+  border-radius: 6px;
+  max-width: 350px;
+  padding: 12px;
+}
+
+.cardBody {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px;
+
+  .title {
+    font-weight: bold;
+  }
+
+  .description {
+    display: -webkit-box;
+    max-width: 100%;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+.cardFooter {
+  padding: 12px;
+
+  .buyButton {
+    background-color: #f27a1a;
+    border-radius: 6px;
+    width: fit-content;
+    color: white;
+    padding: 12px;
+    font-weight: 500;
+  }
+}
